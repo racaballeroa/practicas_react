@@ -1,3 +1,4 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Collapse,
@@ -12,17 +13,15 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-class Example extends Component {
+class Example extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false,
+    isOpen: props.estaAbierto,
     };
   }
-  
-  toggle() {
+  toggle () {
     this.setState({
       isOpen: !this.state.isOpen,
     });
@@ -66,3 +65,5 @@ class Example extends Component {
     );
   }
 }
+
+export default Example;

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './example.js';
+import Example from './example.js';
+import Imagen from './imagin.js';
+/*para hacer referencia de unaetiqueta creada es importante llamar la etiqueta
+y su componente y de que archivo lo estamos hacinedo*/
 
 // la clase App se extiende a Componente y componente es:
 class App extends Component {
@@ -9,8 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <Example/>
-          <img src={logo} className="App-logo" alt="logo" />
+        <Example estaAbierto={false} />
+        <Imagen/>
           {/*en el ejempolo que pusiste en clase fue de la siguiente manera:
           <p>{ 'La multiplicación de:'} ${ this.props.primero } {'y'}
           ${ this.props.segundo } {'es:'}</p>

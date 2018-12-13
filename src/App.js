@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Example from './example.js';
 import Imagen from './imagin.js';
@@ -13,7 +12,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <Example estaAbierto={false} />
-        <Imagen/>
+        <Imagen img="true"/>
           {/*en el ejempolo que pusiste en clase fue de la siguiente manera:
           <p>{ 'La multiplicación de:'} ${ this.props.primero } {'y'}
           ${ this.props.segundo } {'es:'}</p>

@@ -1,9 +1,11 @@
 import React from 'react';
+import logo from './logo.svg';
+import { Collapse, } from 'reactstrap';
 
 class Imagen extends React.Component{
   constructor (props) {
     super(props);
-    this.toggle = this.toggl.brind(this);
+    this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
     };
@@ -18,7 +20,9 @@ class Imagen extends React.Component{
   render() {
     return (
       <div className="Imagen">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo" alt="logo" onClick={this.toggle} />
+      <Collapse isOpen={this.state.isOpen} img="true">
+      </Collapse>
       </div>
     );
   }
